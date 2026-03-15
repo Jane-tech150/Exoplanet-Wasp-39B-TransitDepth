@@ -1,0 +1,19 @@
+import lightkurve as lk
+import matplotlib.pyplot as plt
+
+file_path = r"C:\Users\janec\Downloads\tess2022112184951-s0051-0000000181949561-0223-s_lc.fits"
+lc = lk.read(file_path)
+
+#Cleaning up the data
+lc = lc.remove_nans().flatten(window_length=401).normalize()
+
+#Folding the data for Planet 'e'
+# Period: 6.10 days | Epoch (Transit Time): 2457670.6
+folded_lc = lc.fold(period=6.101, epoch_time=2457670.6)
+
+#Plotting the graph
+folded_lc.scatter()
+plt.title("WASP 39b Folded Light Curve")
+plt.show()
+
+folded_lc.to_csv("wasp39b_folded.csv")
