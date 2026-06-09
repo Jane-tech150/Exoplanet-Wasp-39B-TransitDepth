@@ -35,7 +35,9 @@ https://mast.stsci.edu
 ## What I Learned
 Flattening removes slow brightness variations caused by stellar activity — without it, the transit signal gets buried in noise. Phase folding revealed the transit dip clearly across multiple orbital periods.
 
-## Next Steps
-- Calculate transit depth from flux minimum
-- Estimate planetary radius relative to stellar radius
-- Compare results with published WASP-39b parameters
+## Results
+Transit depth: 0.0268 (2.68% stellar brightness decrease). 
+Derived planetary radius: 1.068 × 10⁸ m (cf. literature value 9.13 × 10⁷ m, ~17% overestimate attributed to noise in raw light curve). 
+Equilibrium temperature: ~1170K. 
+Density: 0.104 g/cm³.
+Results consistent with published characterization of WASP-39b as an inflated hot gas giant.
